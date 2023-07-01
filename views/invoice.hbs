@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{baseUrl}}/stylesheets/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="mainContainer">
+        <div class="invoiceHeader">
+            <div class="branding headerDiv">
+                <img src="{{baseUrl}}/images/logo.png" alt="">
+            </div>
+            <div class="invoiceGenerteDate headerDiv">
+                <span class="billingDate">
+                    <h3 class="headerContent">
+                        INVOICE NO.<span class="content billNo">{{invoiceNo}}</span>
+                    </h3>
+                    <h3 class="headerContent">
+                        BILL DATE: <span class="content">{{billDate}}</span>
+                    </h3>
+                </span>
+            </div>
+        </div>
+
+        <div class="addressContainer">
+            <div class="billingFromAddress billingAddress">
+                <h4>
+                    7, 3rd Floor, 319/21, Mody Chmbs, Narsinatha Street, Masjid Bunder
+                </h4>
+                <span> (east) Mumbai, Maharashtra, 400009 02223432767</span>
+            </div>
+            <div class="billingToAddress billingAddress">
+                <h4>Billing To :</h4>
+                <h4>
+                    7, 3rd Floor, 319/21, Mody Chmbs, Narsinatha Street, Masjid Bunder
+                </h4>
+                <span> (east) Mumbai, Maharashtra, 400009 02223432767</span>s
+            </div>
+        </div>
+
+        <div class="tableContaier">
+            <table>
+                <tr>
+                    <th class="header1" colspan="2">DESCRIPTION</th>
+                    <th class="header2">AMOUNT (INR)</th>
+                </tr>
+                {{#each invoiceItems}}
+                <tr class="tableContent">
+                    <td colspan="2" class="contentDesc">
+                        {{item}}
+                        <br />
+                    </td>
+                    <td>{{amount}}</td>
+                </tr>   
+                {{/each}}
+
+
+
+                <tr class="tableAmountContent">
+                    <td colspan="2" class="amountHeader">SubTotal</td>
+                    <td>22</td>
+                <tr class="tableAmountContent">
+                    <td colspan="2" class="amountHeader">IGST (%9)</td>
+                    <td>{{IGST}}</td>
+                </tr>
+                <tr class="tableAmountContent">
+                    <td colspan="2" class="amountHeader">SGST (%9)</td>
+                    <td>{{SGST}}</td>
+                </tr>
+                </tr>
+                <tr class="tableAmountContent">
+                    <td colspan="2" class="amountHeader">CGST (%9)</td>
+                    <td>{{CGST}}</td>
+                </tr>
+                <tr class="tableAmountContent">
+                    <td colspan="2" class="amountHeader">Total</td>
+                    <td>{{GRAND_TOTAL}}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="clientDetailsContainer">
+            <h4>make all cheques payable to </h4>
+            <h4 class="accountDetail">Account Details </h4>
+            <h4>Account No </h4>
+            <h4>IFSC Code. </h4>
+            <h4>Account Holder </h4>
+            <h4>Swift Code. </h4>
+            <h4>PAN Card Number </h4>
+
+        </div>
+
+        <div class="pdfFooter">
+            <h3> THANK YOU!</h3>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+.mainContainer {
+  height: 100vh;
+  width: 100vw;
+  padding: 20px;
+  /* border: 1px solid red; */
+}
+.mainContainer .invoiceHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid black;
+}
+
+.mainContainer .invoiceHeader .headerDiv {
+  height: 100px;
+  /* border: 2px solid red; */
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  color: red;
+}
+.mainContainer .invoiceHeader .headerDiv:first-child  img{
+    width: 180px;
+  
+}
+.mainContainer .invoiceHeader .headerDiv:last-child {
+  justify-content: flex-end;
+}
+.mainContainer .invoiceHeader .invoiceGenerteDate .billingDate {
+  text-align: right;
+}
+
+.mainContainer .invoiceHeader .invoiceGenerteDate .billingDate .content {
+  color: #909090;
+}
+.mainContainer .invoiceHeader .invoiceGenerteDate .billingDate .billNo {
+  font-size: 23px;
+}
+
+.mainContainer .invoiceHeader .invoiceGenerteDate .billingDate .headerContent {
+  color: black;
+  font-weight: bold;
+  margin: 1px;
+  padding: 1px;
+}
+
+.mainContainer .addressContainer {
+  height: 200px;
+  /* height: auto; */
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainContainer .addressContainer .billingAddress {
+  /* padding: 10px; */
+  height: 100%;
+  width: 45%;
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+}
+.mainContainer .addressContainer .billingAddress:first-child {
+  flex-direction: column;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+}
+.mainContainer .addressContainer .billingAddress h4 {
+  padding: 1px;
+  margin: 1px;
+}
+
+.mainContainer .addressContainer .billingAddress {
+  padding: 10px;
+  justify-content: center;
+}
+
+.mainContainer .addressContainer .billingAddress:last-child {
+  /* justify-content: flex-start; */
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mainContainer .tableContaier {
+  /* height: 400px; */
+  padding: 10px;
+  /* border: 2px solid green; */
+}
+
+table {
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border: 2px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.header1 {
+  width: 80%;
+  text-align: left;
+}
+.header2 {
+  width: 20%;
+}
+.tableContent .contentDesc {
+  text-align: left;
+}
+.tableContaier .tableAmountContent .amountHeader {
+  text-align: right;
+  font-weight: bold;
+}
+
+.clientDetailsContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 40px 10px;
+}
+.clientDetailsContainer h4{
+    padding: 2px;
+    margin: 3px;
+    font-weight: 400;
+}
+.clientDetailsContainer .accountDetail{
+    font-weight:bold;
+}
+
+.pdfFooter{
+    width: 100%;
+    text-align: center;
+    padding:10px;
+}
